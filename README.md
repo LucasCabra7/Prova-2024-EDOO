@@ -23,7 +23,19 @@
 
 <h2> 📋 CONCEITOS: </h2>
 
-Nesta prova, aplicamos os conceitos de Estrutura de Dados Orientada a Objetos (EDOO), disciplina do curso de Sistema de Informação do CIN/UFPE. Utilizamos a linguagem de programação C++, com o apoio das ferramentas CLion e Visual Studio Code para o desenvolvimento e execução dos códigos.
+O sistema foi desenvolvido utilizando os princípios da Programação Orientada a Objetos (POO) em C++, com uma arquitetura baseada em herança, encapsulamento e polimorfismo. 
+
+A classe base abstrata `Sala`, definida no arquivo `Sala.h`, contém atributos comuns a todas as salas, como `tipo`, `capacidade`, `disponivel`. Essa classe é caracterizada pela presença de um método puramente virtual `reservar()`, que obriga todas as classes derivadas, como (`SalaAula`, `SalaReunia` e `Auditorio`) a implementar sua própria versão desse método. Esse uso de polimorfismo garante que cada tipo de sala tenha um comportamento específico para o processo de reserva, respeitando suas particularidades.
+
+Todos os atributos da classe `Sala` (e também das classes Filhas) são declarados como **privados**, promovendo o encapsulamento. O acesso e a modificação desses atributos são feitos exclusivamente por meio de **métodos públicos (Getters e Setters)**, garantido maior segurança e controle sobre os dados internos das classes.
+
+Cada classe Filha também define seu próprio construtor, que utiliza a inicialização para repassar os parâmetros ao construtor da classe base (**Sala**), garantindo que os atributos herdados sejam corretamente inicializados.
+
+A estrutura do sistema está organizada em arquivos separados, utilizando boas práticas em C++:
+
+-> Arquivos `.h` para declaração das classes e métodos;
+
+-> Arquivos `.cpp` para a implementação dos comportamentos definidos nas classes.
 
 [Prova EDOO 2024.2.docx](https://github.com/user-attachments/files/21107159/Prova.EDOO.2024.2.docx)
 
